@@ -38,13 +38,13 @@ namespace BestRestaurants.Controllers
     {
       CuisineType thisCuisineType = _db.CuisineTypes
                                   .Include(cuisineType => cuisineType.Restaurants)
-                                  .FirstOrDefault(cuisineType => cuisineType.CuisineId == id);
+                                  .FirstOrDefault(cuisineType => cuisineType.CuisineTypeId == id);
       return View(thisCuisineType);
     }
 
     public ActionResult Edit(int id)
     {
-      CuisineType thisCuisineType = _db.CuisineTypes.FirstOrDefault(cuisineType => cuisineType.CuisineId == id);
+      CuisineType thisCuisineType = _db.CuisineTypes.FirstOrDefault(cuisineType => cuisineType.CuisineTypeId == id);
       return View(thisCuisineType);
     }
 
@@ -58,14 +58,14 @@ namespace BestRestaurants.Controllers
 
     public ActionResult Delete(int id)
     {
-      CuisineType thisCuisineType = _db.CuisineTypes.FirstOrDefault(cuisineType => cuisineType.CuisineId == id);
+      CuisineType thisCuisineType = _db.CuisineTypes.FirstOrDefault(cuisineType => cuisineType.CuisineTypeId == id);
       return View(thisCuisineType);
     }
 
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      CuisineType thisCuisineType = _db.CuisineTypes.FirstOrDefault(cuisineType => cuisineType.CuisineId == id);
+      CuisineType thisCuisineType = _db.CuisineTypes.FirstOrDefault(cuisineType => cuisineType.CuisineTypeId == id);
       _db.CuisineTypes.Remove(thisCuisineType);
       _db.SaveChanges();
       return RedirectToAction("Index");

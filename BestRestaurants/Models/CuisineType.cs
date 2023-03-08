@@ -4,7 +4,7 @@ namespace BestRestaurants.Models
 {
   public class CuisineType
   {
-    public int CuisineId { get; set; }
+    public int CuisineTypeId { get; set; }
     public string Cuisine { get; set; }
     public List<Restaurant> Restaurants { get; set; }
   }

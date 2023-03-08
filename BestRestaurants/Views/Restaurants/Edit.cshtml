@@ -16,9 +16,10 @@
   @Html.EditorFor(model => model.Name)
 
   @Html.LabelFor(model => model.CuisineType)
-  @Html.DropDownList("CuisineId")
+  @Html.DropDownList("CuisineTypeId")
 
   <input type="submit" value="Save" />
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

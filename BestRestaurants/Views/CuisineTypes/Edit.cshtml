@@ -10,7 +10,7 @@
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.CuisineId)
+  @Html.HiddenFor(model => model.CuisineTypeId)
 
   @Html.LabelFor(model => model.Cuisine)
   @Html.EditorFor(model => model.Cuisine)
@@ -18,3 +18,4 @@
   <input type="submit" value="Save" />
 }
 <p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
