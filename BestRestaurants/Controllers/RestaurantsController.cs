@@ -26,14 +26,14 @@ namespace BestRestaurants.Controllers
  
     public ActionResult Create()
     {
-      ViewBag.CuisineTypeId = new SelectList(_db.CuisineTypes, "CuisineTypeId", "Name");
+      ViewBag.CuisineId = new SelectList(_db.CuisineTypes, "CuisineId", "Cuisine");
       return View();
     }
 
     [HttpPost]
     public ActionResult Create(Restaurant restaurant)
     {
-      if (restaurant.CuisineTypeId == 0)
+      if (restaurant.CuisineId == 0)
       {
         return RedirectToAction("Create");
       }
@@ -44,14 +44,16 @@ namespace BestRestaurants.Controllers
 
     public ActionResult Details(int id)
     {
-      Restaurant thisRestaurant = _db.Restaurants.Include(restaurant => restaurant.CuisineType).FirstOrDefault(restaurant => restaurant.RestaurantId == id);
+      Restaurant thisRestaurant = _db.Restaurants
+                                      .Include(restaurant => restaurant.CuisineType)
+                                      .FirstOrDefault(restaurant => restaurant.RestaurantId == id);
       return View(thisRestaurant);
     }
 
     public ActionResult Edit(int id)
     {
       Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
-      ViewBag.CuisineTypeId = new SelectList(_db.CuisineTypes, "CuisineTypeId", "Name");
+      ViewBag.CuisineId = new SelectList(_db.CuisineTypes, "CuisineId", "Cuisine");
       return View(thisRestaurant);
     }
 

@@ -7,9 +7,9 @@
 
 <h2>Cuisine Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Cuisineine): @Html.DisplayFor(model => modCuisineuisine)<h3>
+<h3>@Html.DisplayNameFor(model => model.Cuisine): @Html.DisplayFor(model => model.Cuisine)</h3>
 
-@if (@Model.Items.Count == 0)
+@if (@Model.Restaurants.Count == 0)
 {
   <h3>No cuisine types have been added!</h3>
 } 
@@ -25,5 +25,5 @@ else
 }
 
 <p>@Html.ActionLink("Edit Category", "Edit", new { id = Model.Cuisine })</p>
-<p>@Html.ActionLink("Delete Category", "Delete", new { id = Model.Cuisined })</p>
+<p>@Html.ActionLink("Delete Category", "Delete", new { id = Model.Cuisine })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>
