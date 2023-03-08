@@ -13,6 +13,13 @@
 {
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name)
+  @Html.LabelFor(model => model.Dish)
+  @Html.TextBoxFor(model => model.Dish)
+  @Html.LabelFor(model => model.Price)
+  @Html.TextBoxFor(model => model.Price)
+  @Html.LabelFor(model => model.Location)
+  @Html.TextBoxFor(model => model.Location)
+
 
   @Html.LabelFor(model => model.CuisineType)
   @Html.DropDownList("CuisineTypeId")

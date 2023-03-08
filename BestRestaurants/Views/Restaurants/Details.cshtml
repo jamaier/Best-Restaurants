@@ -6,8 +6,11 @@
 
 <h2>Restaurant Details</h2>
 <hr />
+<h2>@Html.DisplayNameFor(model => model.CuisineType): @Html.DisplayFor(model => model.CuisineType.Cuisine)<h2>
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
-<h3>@Html.DisplayNameFor(model => model.CuisineType): @Html.DisplayFor(model => model.CuisineType.Cuisine)<h3>
+<h3>@Html.DisplayNameFor(model => model.Dish): @Html.DisplayFor(model => model.Dish)<h3>
+<h3>@Html.DisplayNameFor(model => model.Price): @Html.DisplayFor(model => model.Price)<h3>
+<h3>@Html.DisplayNameFor(model => model.Location): @Html.DisplayFor(model => model.Location)<h3>
 
 <p>@Html.ActionLink("Edit Restaurant", "Edit", new { id = Model.RestaurantId })</p>
 <p>@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</p>
