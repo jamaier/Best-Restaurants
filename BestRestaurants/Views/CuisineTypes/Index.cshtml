@@ -13,7 +13,7 @@
 else
 {
   <ul>
-    @foreach (Cuisine cuisine in Model)
+    @foreach (CuisineType cuisineType in Model)
     {
       <li>@Html.ActionLink($"{cuisineType.Cuisine}", "Names", new { id = cuisineType.CuisineId })</li>
     }

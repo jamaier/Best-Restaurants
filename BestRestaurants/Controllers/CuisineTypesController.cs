@@ -4,7 +4,7 @@ using BestRestaurants.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BestRaurants.Controllers
+namespace BestRestaurant.Controllers
 {
   public class CuisineTypesController : Controller
   {
@@ -36,7 +36,7 @@ namespace BestRaurants.Controllers
 
     public ActionResult Details(int id)
     {
-      CuisineType thisCuisineType = _db.CuisineTypes.Include(cuisineType => cuisineType.Restaurants).FirstOrDefault(cuisineType => cuisineType.CuisineTypeId == id);
+      CuisineType thisCuisineType = _db.CuisineType.Include(cuisineType => cuisineType.Restaurants).FirstOrDefault(cuisineType => cuisineType.CuisineTypeId == id);
       return View(thisCuisineType);
     }
 
