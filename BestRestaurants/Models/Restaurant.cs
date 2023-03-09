@@ -7,7 +7,6 @@ namespace BestRestaurants.Models
     public string Dish { get; set; }
     public int Price { get; set; }
     public string Location { get; set; }
-
     public int CuisineTypeId { get; set; }
     public CuisineType CuisineType { get; set; }
   }
