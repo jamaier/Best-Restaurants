@@ -5,7 +5,7 @@
 @model BestRestaurants.Models.Restaurant
 
 <p><strong>NOTE:</strong> You need to have at least one cuisine type before you can add an restaurant!</p>
-<p>Go to @Html.ActionLink("this page", "Create", "CuisineTypes") to create a cuisine type.</p>
+<p>Go to @Html.ActionLink("This page", "Create", "CuisineTypes") to create a cuisine type.</p>
 
 <h4>Add a new Restaurant</h4>
 
@@ -24,7 +24,7 @@
   @Html.LabelFor(model => model.CuisineType)
   @Html.DropDownList("CuisineTypeId")
 
-  <input type="submit" value="Add new Restaurant" class="btn btn-primary" />
+  <input type="submit" value="Add new Restaurant" class="link" />
 }
-<p>@Html.ActionLink("Show all items", "Index")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<p>@Html.ActionLink("Show all items", "Index", null, new { @class = "link" })</p>
+<p>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "link" })</p>

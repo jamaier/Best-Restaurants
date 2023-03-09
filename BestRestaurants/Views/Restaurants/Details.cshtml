@@ -12,7 +12,7 @@
 <h3>@Html.DisplayNameFor(model => model.Price): @Html.DisplayFor(model => model.Price)<h3>
 <h3>@Html.DisplayNameFor(model => model.Location): @Html.DisplayFor(model => model.Location)<h3>
 
-<p>@Html.ActionLink("Edit Restaurant", "Edit", new { id = Model.RestaurantId })</p>
-<p>@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</p>
-<p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<p>@Html.ActionLink("Edit Restaurant", "Edit",null, new { id = Model.RestaurantId })</p>
+<p>@Html.ActionLink("Delete Restaurant", "Delete",null, new { id = Model.RestaurantId })</p>
+<p>@Html.ActionLink("Back to list", "Index",null, new { @class = "link" })</p>
+<p>@Html.ActionLink("Home", "Index", "Home",null, new { @class = "link" })</p>
